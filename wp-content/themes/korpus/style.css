@@ -1,0 +1,604 @@
+/*
+Theme Name: Korpus
+Description: Шаблон сайта корпус-волонтеров.рф
+Author: valerol
+*/
+
+/* ! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+	margin: 0;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+#    font: 16px/26px sans-serif;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container,
+.footer-container {
+    background: #00588a;
+}
+
+.header-container header  {
+    background: url('img/logo.gif') no-repeat 0 10px;
+	width: 300px;
+	height: 160px;
+	top: 5px;
+}
+
+.title {
+    color: white;
+}
+
+h1, h2, h3 {
+	color: #00588a;
+}
+
+.main-container {
+	padding: 10px 0;
+}
+
+.greeting  h2 {
+	color: #00588a;
+    margin: 0;
+}
+
+.greeting strong {
+	color: #00588a;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+	font-size: 0.8em;
+}
+
+.footer-container ul {
+	padding: 0;
+}
+
+.footer-container li {
+	list-style: none;
+}
+
+a {
+	color: #00588a;
+}
+
+.more {
+	text-decoration: underline dashed;
+}
+
+.nav-links a {
+    margin: 5px;
+}
+
+.date {
+    color: #00588a;
+    font-size: 0.9em;
+}
+
+footer h2 {
+	color: white;
+}
+
+/* ==============
+    MOBILE
+   ============== */
+
+.jcarousel, .widget-area, .attachment-post-thumbnail {
+	display: none;
+}
+
+.left-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.left-menu a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-decoration: none;
+	font-size: 1.5em;
+    font-weight: bold;
+
+    color: #00588a;
+}
+
+.left-menu a:hover {
+    text-decoration: underline;
+}
+
+aside h2 {
+	color: #00588a;
+}
+
+.main {
+#    padding: 30px 0;
+}
+
+.main article h1 {
+#    font-size: 4em;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: 
+   ==================== */
+
+    .left-menu li:first-child a {
+        margin-left: 0;
+    }
+
+    .left-menu li:last-child a {
+        margin-right: 0;
+    }
+    
+	article img {
+		max-width: 470px;
+		height: auto;
+	}
+	
+	.nav-links {
+		clear: right;
+	}
+
+/* ========================
+    IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	main ul {
+		padding-left: 10px;
+	}
+
+	main li {
+		list-style: none;
+		background: url('data:&lt;;base64,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') no-repeat 0 1px;
+		padding-left: 33px;
+		line-height: 2em;
+	}
+
+	.attachment-post-thumbnail {
+		float: right;
+		width: 200px;
+		margin: 0 0 10px 10px;
+	}
+
+	.header-container header h1 {
+		padding-top: 10px;
+		height: 59px;
+	}
+	
+	.slider {
+		position: relative;
+	}
+	
+	.jcarousel, .widget-area, .attachment-post-thumbnail {
+		display: block;
+	}
+	
+	.jcarousel {
+		position: relative;
+		overflow: hidden;
+		height: 150px;
+	}
+	
+	.jcarousel ul {
+		width: 20000em;
+		position: absolute;
+
+		/* Optional, required in this case since it's a <ul> element */
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.jcarousel li {
+		float: left;
+		list-style-type: none;
+		display: inline;
+		padding: 0 1px;
+	}
+	
+	.jcarousel li:first-child {
+		padding: 0;
+	}
+	
+	.jcarousel img {
+		width: 200px;
+		height: 150px;
+	}
+	
+	.jcarousel-prev, .jcarousel-next {
+		background: none repeat scroll 0 0 white;
+		height: 150px;
+		opacity: 0.8;
+		position: absolute;
+		width: 22px;
+		z-index: 1;
+	}
+	
+	.jcarousel-prev {
+		left: 0;
+	}
+	
+	.jcarousel-next {
+		right: 0;
+	}
+	
+	.jcarousel-prev a, .jcarousel-next a {
+		display: block;
+		height: 150px;
+		width: 22px;
+	}
+	
+	.jcarousel-prev a {
+		background: url('img/slider_prev.png') 0 62px no-repeat;
+	}
+	
+	.jcarousel-next a {
+		background: url('img/slider_next.png') 2px 62px no-repeat;
+	}
+	
+	.greeting h2 {
+		font-size: 4em;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+
+
+/* ============
+    WIDE
+   ============ */
+
+    .title {
+        float: left;
+    }
+	
+	h1, h2, h3 {
+	font-family: "Open Sans Condensed", sans-serif;
+	}
+
+    .left-menu a {
+		font-family: 'Open Sans Condensed', sans-serif;
+        float: right;
+        width: 100%;
+    }
+
+	.main article {
+		clear: right;
+    }
+	
+	main {
+		margin-left: 240px;
+	}
+
+    .main aside {
+       float: left;
+		width: 220px;
+    }
+
+	aside h2, footer h2 {
+		font-weight: 200;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+
+	.header-container header h1 {
+		padding-top: 20px;
+		height: 49px;
+	}
+	
+	article img {
+		max-width: 600px;
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    
+	.ngg-galleryoverview div.pic img {
+		width: auto;
+	}
+	
+	article img {
+		max-width: 786px;
+		height: auto;
+	}
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+	  
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Plugins */
+
+.ngg-albumoverview, .ngg-galleryoverview {
+	clear: none;
+}
+
+.ngg-gallery-list li {
+	background: none;
+	padding: 0;
+	margin: 5px !important;
+}
+
+.ngg-gallery-list li img {
+	width: 180px;
+	height: 135px;
+}
+
+.gallery {
+    float: left;
+    margin: 0 10px;
+}
+
+.gallery img {
+    border: 1px solid #bcbbbb;
+    padding: 5px;
+}
